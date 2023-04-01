@@ -1,0 +1,31 @@
+@charset "UTF-8";
+body{background-color: aliceblue;}
+
+h1{color: rgb(118, 160, 34);
+    background-color:palegreen;
+    border-style: dotted;
+    border-width: 4px;
+    border-color: #20b2aa;}
+
+
+h2{color: olivedrab;}
+
+p{color: slategray;}
+
+li{color: slategray;}
+
+.black{color: rgb(151, 151, 229);}
+
+footer{background-color: palegreen;
+    text-align: center;
+    color: slategray;}
+    
+
+a{color: seagreen;}
+a:hover{color: limegreen;
+    background-color: rgb(106, 157, 234);
+    text-decoration: solid;}
+
+.wrapper{width: 1000px;
+    background-color: rgb(205, 246, 227);}
+

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/* 全体共通 */
+* {box-sizing: border-box;}
+/* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
+
+
+
+body {font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium","游ゴシック", "Yu Gothic", sans-serif;
+  background-image:url(../images/background.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;}
+
+body,h1,h2,h3,ul,p{margin:0; padding:0;}
+
+
+
+p{font-size: 16px;
+  line-height: 2;}
+
+img{vertical-align: bottom;}
+
+
+/* 共通　ヘッダー・メインナビゲーション */
+header img{width: 50%;
+  margin: 5px, auto;}
+
+
+header{display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color:rgb(0, 0,0);}
+
+header nav{width: 50%;}
+  
+header nav ul{display: flex;
+  list-style: none;}
+
+header nav ul a{text-decoration: none;
+  display: block;
+  text-align: center;
+  width: 160px;
+  color: red;}
+
+header nav ul a:hover{background-color: dimgray;}
+
+
+/* 共通　フッター */
+footer{background-color: black;}
+
+footer nav{width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;}
+
+footer nav ul{display: flex;
+  list-style: none;}
+
+footer nav ul a{text-decoration: none;
+  display: block;
+  text-align: center;
+  width: 125px;
+  color: red;
+  margin-top: 20px;}
+
+footer nav ul a:hover{background-color: darkgray;}
+
+/* index.html */
+
+main{width: 1000px;
+margin: 0 auto;}
+
+.menu{display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  margin-top: 20px;}
+
+.menu h3{color: red;}
+
+.menuBox{width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin: 10px;
+  padding: 5px;}
+
+.menuBox img{width: 90%;
+  margin-bottom: 5px;}
+
+
+
+/* クラスセレクタ */
+.main{background-color: rgba( 0, 0,0, 0.8);
+  color: rgb(228, 217, 217);
+  margin-top: 10px;}
+
+/* index.html　メインビジュアル */
+.wrapper2 article{display: flex;}
+.mainimage{width: 100%;}
+.images{width: 400px;}
+
+
+/* index.html イントロテキスト部分 */
+
+/* index.html バナーエリア */
+
+/* 中面ページ共通項目 */
+
+
+/* ストーリーページ */
+
+
+/* キャラクターページ */
+
+
+/* ボイスキャストページ */
+
+/* jQuery スライド */
+.slideshow {margin: 0 0 10px 0;
+	position:relative;
+	width:100%;
+	height:600px;
+	overflow:hidden;}
+
+.slideshow img {position:absolute;
+  top:0;
+  left:0;
+  z-index:10;
+  width: 100%;}
+
+.slideshow img.active {z-index:30; }
+
+.slideshow img.last-active {z-index:20; }

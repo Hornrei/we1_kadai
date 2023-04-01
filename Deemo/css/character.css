@@ -1,0 +1,240 @@
+
+body,h1,h2,h3,p{margin: 0;padding:0;}
+@font-face {
+  font-family: 'tate';
+  src: url(../font/KleeOne-Regular.ttf);
+  font-family: 'title';
+  src: url(../font/ShipporiMincho-Regular.ttf);}
+
+body{font-family: "游ゴシック","ヒラギノ角ゴ　ProN","メイリオ","MS Pゴシック",sans-serif;
+  width:100%;
+  overflow-x: hidden;}
+
+.back{width: 100%;}
+
+/* ハンバーガーボックス */
+.menu-btn {           /* ボタンデザイン */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 80px;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: #e18acc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+
+
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {     /* チェックボックスのボタンを隠す */
+    display: none;
+}
+
+.menu-content {
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 80;
+  background-color: #d54eca;
+}
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+.menu-content ul li {
+  border-bottom: dotted 3px #ffffff;
+  list-style: none;
+  margin-top: 5px;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+  letter-spacing: 2px;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+.menu-content ul li a:hover{
+  color: #921988;
+  transition: .4s cubic-bezier(0.37, 0, 0.63, 1)}
+
+
+.menu-content {
+  width: 35%;
+  height: 100%;
+  float:right;
+  top: 0;
+  right: -100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color:rgba(228, 160, 212,0.8);
+  transition: all 0.7s;/*アニメーション設定*/
+}
+
+#menu-btn-check:checked ~ .menu-content {
+  right: 0;/*メニューを画面内へ*/
+}
+
+
+/* 桜を表示するコンテナのスタイル */
+.cherry-blossom-container {
+    position: relative;
+    height: 100%; /* コンテナの高さ */
+    width: 100%; /* コンテナの横幅 */
+    /* overflow: hidden; */ /* コンテナからはみ出した要素を隠す */
+    z-index: 30;
+    }
+  
+  /* 桜の花びらのスタイル */
+  .petal {
+    position: absolute;
+    background-color: #ffc0cb; /* 花びらの色 */
+    border-radius: 150% 0 150% 0;
+    animation: animate-petal 10s linear;
+  }
+  
+  .petal::after {
+    content: "";
+    position: absolute;
+    top: -14%;
+    left: -10%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 192, 203,0);
+    border-radius: 150% 0 150% 0;
+    transform: rotate(15deg);
+  }
+  
+  /* 花びらが降るアニメーション */
+  @keyframes animate-petal {
+    0% {
+      top: 0;
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      top: 100%;
+      transform: rotate(3000deg);
+    }
+  }
+
+
+
+
+article{
+    margin: 0 auto;
+    width: 1000px;
+
+}
+
+.cast h2{
+    font-size: 50px;
+    letter-spacing: 8px;
+    font-weight: lighter;
+    background: linear-gradient(transparent 99%, black 0%);
+    margin-bottom: 40px;
+}
+
+.character{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chara{
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
+.main{
+    font-weight: lighter;
+    font-size: 30px;
+    margin-bottom: 15px;
+    letter-spacing: 0.15em;
+}
+
+.chara p{
+    letter-spacing: 0.12em;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.alicetext{
+    margin-top: 370px;
+    margin-left: 20px;
+}
+
+.sub{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: auto;
+    padding-bottom: 0;
+    
+}
+
+.sub-chara{margin-top: auto;
+  margin-bottom: 0;}
+
+
+
+
+footer{text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;}

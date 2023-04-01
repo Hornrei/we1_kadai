@@ -1,0 +1,397 @@
+body,h1,h2,h3,p{margin: 0;padding:0;}
+@font-face {
+  font-family: 'tate';
+  src: url(../font/KleeOne-Regular.ttf);
+  font-family: 'title';
+  src: url(../font/ShipporiMincho-Regular.ttf);}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{font-family: "游ゴシック","ヒラギノ角ゴ　ProN","メイリオ","MS Pゴシック",sans-serif;
+  width:100%;
+  overflow-x: hidden;
+  box-sizing: border-box;}
+
+body img{
+  display: block;
+}
+
+.back{width: 100%;}
+
+
+/* ----------パターン1：透明度が変化---------- */
+/* 画面外 */
+.fade-block1,.fade-block2, .fade-block3, .fade-block4 .fade-block5{
+  opacity: .1;
+  transition: all 1.5s;
+}
+/* 画面に入った時の動き */
+.fade-block1.blockIn {
+  opacity: 1;
+}
+
+
+.wrapper{
+  width:1000px;
+  margin: 0,auto;
+    margin-top: 1000px;
+    text-align: center;}
+
+
+
+.header{position: relative;}
+.title{
+  position: absolute;
+  top: 40px;
+  left: 200px;
+  font-size: 46px;
+  color: #ffffff;
+ /*  font-family: title; */
+  writing-mode: vertical-rl;
+  letter-spacing: 6px;
+  font-weight: lighter;}
+
+.rogo{
+  position: absolute;
+  top:570px;
+  left:470px;
+}
+
+/* ハンバーガーボックス */
+.menu-btn {           /* ボタンデザイン */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 80px;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: #e18acc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+
+
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {     /* チェックボックスのボタンを隠す */
+    display: none;
+}
+
+.menu-content {
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 80;
+  background-color: #d54eca;
+}
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+.menu-content ul li {
+  border-bottom: dotted 3px #ffffff;
+  list-style: none;
+  margin-top: 5px;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+  letter-spacing: 2px;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+.menu-content ul li a:hover{
+  color: #921988;
+  transition: .4s cubic-bezier(0.37, 0, 0.63, 1)}
+
+
+.menu-content {
+  width: 35%;
+  height: 100%;
+  float:right;
+  top: 0;
+  right: -100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color:rgba(228, 160, 212,0.8);
+  transition: all 0.7s;/*アニメーション設定*/
+}
+
+#menu-btn-check:checked ~ .menu-content {
+  right: 0;/*メニューを画面内へ*/
+}
+
+
+
+
+
+
+  /* 桜を表示するコンテナのスタイル */
+  .cherry-blossom-container {
+      position: relative;
+      height: 100%; /* コンテナの高さ */
+      width: 100%; /* コンテナの横幅 */
+      /* overflow: hidden; */ /* コンテナからはみ出した要素を隠す */
+    }
+    
+    /* 桜の花びらのスタイル */
+    .petal {
+      position: absolute;
+      background-color: #ffc0cb; /* 花びらの色 */
+      border-radius: 150% 0 150% 0;
+      animation: animate-petal 30s linear;
+    }
+    
+    .petal::after {
+      content: "";
+      position: absolute;
+      top: -14%;
+      left: -10%;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 192, 203,0);
+      border-radius: 150% 0 150% 0;
+      transform: rotate(15deg);
+    }
+    
+    /* 花びらが降るアニメーション */
+    @keyframes animate-petal {
+      0% {
+        top: 0;
+        opacity: 0;
+        transform: rotate(0deg);
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        top: 100%;
+        transform: rotate(3000deg);
+      }
+    }
+
+
+  article{
+      width: 1000px;
+      margin: 0 auto;
+  }
+
+  .intro1{writing-mode: vertical-rl;}
+
+.tategaki{height:100vh;
+  margin-top:150px}
+
+section{margin-top: 40px;
+  height:100vh;}
+
+
+
+/* サヨナラも言わずに、 */
+.tategaki h1{
+  text-align: center;
+  /* font-family:tate; */
+  font-size: 40px;
+  color: #e08eda;
+  font-weight: lighter;
+  letter-spacing: 5px;}
+
+
+
+.staff{
+  text-align:center;}
+
+
+section h3{color: #e15ad8;
+    font-size: 20px;
+    font-family:"游ゴシック";}
+
+.introduction{margin: 200px 0;
+  /* text-align: center */;}
+
+.introduction h3{font-size: 22px;
+  letter-spacing: 0.18em;
+  line-height: 2;
+  padding-bottom: 18px;}
+
+.introduction p{margin:10px 0;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  line-height: 2;
+  padding-top: 20px;
+  text-align: center;}
+
+.story1{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 130px;
+}
+
+.story2{margin-left: 20px;}
+
+.story2 h2{
+  font-size: 50px;
+  letter-spacing: 8px;
+  font-weight: lighter;
+ padding: 0 0;
+ margin-bottom: 30px;
+ background: linear-gradient(transparent 99%, black 0%);
+ 
+}
+
+.story2 p{
+  letter-spacing: 0.15em;
+  font-size: 15px;
+line-height: 2;}
+
+
+.deemo1{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+
+}
+
+.deemo1 h2{
+  font-size: 50px;
+  letter-spacing: 8px;
+  font-weight: lighter;
+ padding: 0 0;
+ margin-bottom: 30px;
+ background: linear-gradient(transparent 99%, black 0%);
+}
+
+.deemo2 p{
+  letter-spacing: 0.13em;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.staff p{
+  color: rgb(68, 67, 67);
+}
+
+footer{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.rayark{margin-top: 40px;
+  margin: 0 auto;
+;}
+.share{
+  max-height: 50px;
+  display: flex;
+  margin: 0 auto;
+  padding-left: 730px;
+  padding:auto auto 0 auto;
+}
+
+.footerimg{
+  width: 100%;
+}
+
+
+
+
+
+
+.mainp{font-size: 27px;
+  padding-bottom: 15px;}
+
+.subp{font-size: 15px;}
+
+.gotop{
+  display: block;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: #FFF;
+  border: 1px solid #999;
+  padding-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  font-size: 85%;
+  text-decoration: none;
+  color: #333;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+.gotop::before{
+  content: "";
+  display: block;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  width: 25%;
+  height: 25%;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.gotop:hover{
+  opacity: 1;
+}
+
+
+
+
