@@ -1,0 +1,37 @@
+必要な箇所に以下のコードをこれをコピーして下さい。
+
+head内
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  
+ body内
+ 検索の項目はこれ
+ <div class="search">
+    <form method="get" action="http://www.google.co.jp/search" target="_blank">
+      <input type="search" name="query" size="30">
+      <input type="submit" name="btn" value="検索">
+    </form>
+  </div><!-- end search -->
+  
+  
+bxsliderの項目はこれ
+  <ul class="bxslider">
+    <li><img src="./images/main_visual_01.jpg" alt="スライドショーイメージ01"></li>
+    <li><img src="./images/main_visual_02.jpg" alt="スライドショーイメージ02"></li>
+    <li><img src="./images/main_visual_03.jpg" alt="スライドショーイメージ03"></li>
+  </ul>
+ 
+ 
+ bxsliderの設定には下記が必要
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<!-- 下記の記述は必要 -->
+<script>
+  $(function() {
+      $('.bxslider').bxSlider({
+        auto: true /* 追加部分 */
+      });
+    });
+</script>
+  
+  

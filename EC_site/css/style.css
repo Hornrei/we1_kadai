@@ -1,0 +1,90 @@
+@charset "UTF-8";
+* {box-sizing: border-box;} /* paddingとborderを幅と高さに含める */
+
+body {
+	font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  line-height: 1.8;}
+
+ul,li {list-style: none;}
+
+a{text-decoration: none;}
+
+/* ヘッダー部分・ロゴ・サイトタイトル */
+header{
+  display: flex;
+  margin: 15px 5px 10px 15px;}
+.rogo img{width: 400px;}
+
+
+
+/* メインナビゲーションと検索box */
+.headerright{
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.menu ul{
+  display: flex;
+}
+
+
+/* bxslider */
+.sliderBox .bxslider img{}
+
+
+/* テキストエリア */
+article{
+  width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+.about{
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+}
+
+.about img{
+  width: 300px;
+}
+
+/* 商品エリア */
+.itemset{
+  display: flex;
+  justify-content: space-between;
+}
+
+section{
+  max-width: 300px;
+}
+section h3{
+  font-size: 14px;
+}
+section p{
+  font-size: 14px;
+}
+
+
+/* フッター */
+
+
+
+/* 中面ページ　商品詳細ページ設定 */
+
+
+
+/* 商品写真エリア */
+
+
+
+/* テキストエリア */
+
+
+
+/* フォーム */
+
+
+
+/* フォーム・ボタン */
+
+
