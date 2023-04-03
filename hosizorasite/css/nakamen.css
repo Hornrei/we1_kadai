@@ -1,0 +1,293 @@
+@charset "utf-8";
+@font-face {
+    font-family:'neko' ;
+    src: url(../font/Neko_no_Mezame.ttf);
+}
+@font-face{
+    font-family: 'cinzel';
+    src: url(../font/Cinzel-VariableFont_wght.ttf);
+}
+
+body,h1,h2,p,ul,ol{
+    margin: 0;
+    padding: 0;}
+img{
+    vertical-align: bottom;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{list-style: none;}
+
+/* header */
+
+
+header{
+    background-image: url(../image/stella1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+}
+
+
+
+header h1{
+    font-size: 40px;
+    font-family: cinzel;
+    color: aliceblue;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    padding-left: 20px;
+    transition: all 0.3s ease-out;
+    width: fit-content;
+}
+
+header h1:hover{
+    transform: scale(0.95);
+    transform-origin: left;
+
+}
+
+header h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+}
+.gen{
+    font-family:neko ;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.title{
+    text-align: center;
+}
+.setumei{
+    color: aliceblue;
+    margin-top: 30px;
+}
+
+header nav{
+    margin-right: 0;
+    margin-left: auto;
+    width: 50%;
+    padding-right: 180px;
+}
+
+header ul{
+    display: flex;
+    width: 320px;
+    margin-left: auto;
+
+    
+}
+header a{
+    text-decoration: none;
+    
+}
+
+header ul li{
+   list-style: none;
+   font-family: cinzel;
+   color: aliceblue;
+   font-size: 30px;
+   padding-bottom: 10px;
+   margin-right: 20px;
+
+}
+
+/*reset*/
+ul {
+    list-style: none;
+
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  /*ナビゲーションのスタイル*/
+  .header nav {
+    margin: 50px 5% 0;
+  }
+ 
+  header ul li {
+    font-size: 30px;
+    /*アニメーションの速度設定*/ 
+    transition: all 0.5s ease-out;
+  }
+  /*ホバーエフェクト*/
+  header ul li:hover {
+    /*1.25倍に拡大*/
+    -webkit-transform: scale(1.4);
+    transform: scale(0.8);
+  }
+
+
+/* article */
+.stars{
+    padding-bottom: 100px;
+}
+
+article{
+    background-attachment: fixed;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.box{
+    color: aliceblue;
+    margin-left: 40px;
+}
+
+article img{
+    max-height: 500px;
+}
+
+.box h2{
+    font-family: cinzel;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.text p{
+    padding-top: 35px;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.text{
+    margin-top: 100px;
+}
+
+.item_select {
+    width: 80%;
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 16px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.cart_btn {
+    width: 80%;
+    margin: 40px 0 0;
+    padding: 20px 90px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background-color: #c1a2f3;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s ease;
+}
+
+
+/* footer */
+footer{
+    background-image: url(../image/stella1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+
+}
+
+
+
+
+
+.footer_box{
+    display: flex;
+}
+footer h1{
+    margin-bottom: 20px;
+    font-family: cinzel;
+    color: aliceblue;
+    margin-left: 50px;
+    font-size: 40px;
+    width: fit-content;
+    transition: all 0.3s;
+
+}
+
+footer h1:hover{
+    transform: scale(0.9);
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+footer .footer_nav{
+    margin-right: 120px;
+    margin-left: auto;
+}
+
+footer ul{
+    display: flex;
+    width: 310px;
+    
+}
+
+footer li{
+    list-style: none;
+    margin-left: 30px;
+    font-size: 25px;
+    font-family: cinzel;
+    color: aliceblue;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer small{
+    color: aliceblue;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+/*reset*/
+footer ul {
+    list-style: none;
+    padding-right: 120px;
+
+  }
+ footer a {
+    color: #000;
+    text-decoration: none;
+  }
+  /*ナビゲーションのスタイル*/
+  footer nav {
+    margin: 50px 5% 0;
+  }
+ 
+ footer ul li {
+    font-size: 30px;
+    /*アニメーションの速度設定*/ 
+    transition: all 0.5s ease-out;
+    list-style: none;
+  }
+  /*ホバーエフェクト*/
+  footer ul li:hover {
+    /*1.25倍に拡大*/
+    -webkit-transform: scale(1.4);
+    transform: scale(0.8);
+  }
